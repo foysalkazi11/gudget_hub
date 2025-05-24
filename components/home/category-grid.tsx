@@ -8,7 +8,7 @@ const categories = [
     name: "Phone Cases",
     description: "Stylish protection",
     image: "https://images.pexels.com/photos/3082341/pexels-photo-3082341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
-    link: "/category/phone-cases",
+    link: "/shop?category=phone-cases",
     className: "md:col-span-2 md:row-span-1",
   },
   {
@@ -16,7 +16,7 @@ const categories = [
     name: "Headphones",
     description: "Premium audio",
     image: "https://images.pexels.com/photos/577769/pexels-photo-577769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
-    link: "/category/headphones",
+    link: "/shop?category=headphones",
     className: "md:col-span-1 md:row-span-2",
   },
   {
@@ -24,7 +24,7 @@ const categories = [
     name: "Chargers",
     description: "Fast charging",
     image: "https://images.pexels.com/photos/5082573/pexels-photo-5082573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
-    link: "/category/chargers",
+    link: "/shop?category=chargers",
     className: "md:col-span-1 md:row-span-1",
   },
   {
@@ -32,7 +32,7 @@ const categories = [
     name: "Screen Protectors",
     description: "Ultimate protection",
     image: "https://images.pexels.com/photos/6598/coffee-desk-laptop-notebook.jpg?auto=compress&cs=tinysrgb&w=1260&h=750",
-    link: "/category/screen-protectors",
+    link: "/shop?category=screen-protectors",
     className: "md:col-span-1 md:row-span-1",
   },
   {
@@ -40,7 +40,7 @@ const categories = [
     name: "Power Banks",
     description: "Portable power",
     image: "https://images.pexels.com/photos/4526400/pexels-photo-4526400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
-    link: "/category/power-banks",
+    link: "/shop?category=power-banks",
     className: "md:col-span-2 md:row-span-1",
   },
 ];
