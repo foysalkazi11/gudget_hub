@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/client";
 import ProductClient from "./product-client";
+import Link from "next/link";
 
 async function getProduct(slug: string) {
   const supabase = createClient();
@@ -11,6 +12,17 @@ async function getProduct(slug: string) {
 
   if (error) throw error;
   return data;
+}
+
+export async function generateStaticParams() {
+  const supabase = createClient();
+  const { data: products } = await supabase
+    .from("products")
+    .select("slug");
+
+  return (products ?? []).map((product) => ({
+    slug: product.slug,
+  }));
 }
 
 export default async function ProductPage({ params }: { params: { slug: string } }) {
