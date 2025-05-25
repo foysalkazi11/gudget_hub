@@ -7,7 +7,7 @@ export default function AboutPage() {
         <div className="prose dark:prose-invert max-w-none">
           <p className="text-lg mb-6">
             Welcome to GadgetHub, your premier destination for high-quality smartphone accessories and gadgets. 
-            We understand that your smartphone is an essential part of your daily life, which is why we're 
+            We understand that your smartphone is an essential part of your daily life, which is why we&apos;re 
             committed to providing you with the best accessories to enhance your mobile experience.
           </p>
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
           <ul className="list-disc pl-6 mb-6 space-y-2">
             <li>Curated Selection: Every product in our catalog is carefully selected and tested for quality.</li>
             <li>Genuine Products: We only work with reliable suppliers and authorized distributors.</li>
-            <li>Competitive Pricing: Quality doesn't have to be expensive.</li>
+            <li>Competitive Pricing: Quality doesn&apos;t have to be expensive.</li>
             <li>Cash on Delivery: Pay only when you receive your order.</li>
             <li>Customer Support: Our team is always ready to help with any questions or concerns.</li>
             <li>Fast Delivery: Quick processing and reliable shipping partners.</li>
@@ -40,7 +40,7 @@ export default function AboutPage() {
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Our Commitment</h2>
           <p className="mb-6">
-            At GadgetHub, we're committed to:
+            At GadgetHub, we&apos;re committed to:
           </p>
           <ul className="list-disc pl-6 mb-6 space-y-2">
             <li>Quality: We never compromise on the quality of our products.</li>
@@ -51,7 +51,7 @@ export default function AboutPage() {
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">Contact Us</h2>
           <p>
-            Have questions or suggestions? We'd love to hear from you! Visit our Contact page or reach 
+            Have questions or suggestions? We&apos;d love to hear from you! Visit our Contact page or reach 
             out to us through WhatsApp for immediate assistance.
           </p>
         </div>

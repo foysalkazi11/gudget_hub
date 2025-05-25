@@ -114,7 +114,7 @@ export default function CartPage() {
                                 >
                                   {item.name}
                                 </Link>
-                                {item?.discount > 0 && (
+                                {item.discount && item.discount > 0 && (
                                   <div className="text-sm text-red-500">{item.discount}% off</div>
                                 )}
                               </div>
@@ -144,7 +144,7 @@ export default function CartPage() {
                             </div>
                           </td>
                           <td className="p-4 text-right">
-                            {item.discount > 0 ? (
+                            {item.discount && item.discount > 0 ? (
                               <div>
                                 <span className="font-medium">${itemPrice.toFixed(2)}</span>
                                 <span className="text-sm text-muted-foreground line-through block">

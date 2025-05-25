@@ -1,9 +1,9 @@
-import { createClient } from "@/lib/supabase/client";
+import { createServerClient } from "@/lib/supabase/server";
 import ProductClient from "./product-client";
 import Link from "next/link";
 
 async function getProduct(slug: string) {
-  const supabase = createClient();
+  const supabase = createServerClient();
   const { data, error } = await supabase
     .from("products")
     .select("*")
@@ -15,14 +15,19 @@ async function getProduct(slug: string) {
 }
 
 export async function generateStaticParams() {
-  const supabase = createClient();
-  const { data: products } = await supabase
+  const supabase = createServerClient();
+  const { data: products, error } = await supabase
     .from("products")
     .select("slug");
 
-  return (products ?? []).map((product) => ({
+  if (error) {
+    console.error("Error fetching product slugs:", error);
+    return [];
+  }
+
+  return products?.map((product) => ({
     slug: product.slug,
-  }));
+  })) ?? [];
 }
 
 export default async function ProductPage({ params }: { params: { slug: string } }) {
@@ -33,7 +38,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
       <div className="container mx-auto px-4 py-12 text-center">
         <h1 className="text-2xl font-bold mb-4">Product Not Found</h1>
         <p className="text-muted-foreground mb-8">
-          The product you're looking for doesn't exist or has been removed.
+          The product you&apos;re looking for doesn&apos;t exist or has been removed.
         </p>
         <Link href="/shop">Continue Shopping</Link>
       </div>

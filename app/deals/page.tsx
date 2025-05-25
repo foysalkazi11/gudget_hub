@@ -83,7 +83,7 @@ export default function DealsPage() {
       <div className="max-w-2xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Special Deals</h1>
         <p className="text-lg text-muted-foreground">
-          Don't miss out on these limited-time offers on our most popular products.
+          Don&apos;t miss out on these limited-time offers on our most popular products.
         </p>
       </div>
 

@@ -42,7 +42,7 @@ export default function ContactPage() {
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
         <p className="text-lg text-muted-foreground mb-12">
-          Have a question or need assistance? We're here to help! Choose your preferred way to reach us.
+          Have a question or need assistance? We&apos;re here to help! Choose your preferred way to reach us.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -68,7 +68,7 @@ export default function ContactPage() {
                   <h3 className="font-medium">Email</h3>
                   <p className="text-muted-foreground">support@gadgethub.com</p>
                   <p className="text-sm text-muted-foreground">
-                    We'll respond within 24 hours
+                    We&apos;ll respond within 24 hours
                   </p>
                 </div>
               </div>

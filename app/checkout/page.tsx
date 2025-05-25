@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -68,14 +68,16 @@ const CheckoutPage = () => {
   });
 
   // Redirect if cart is empty
-  if (cartItems.length === 0 && !orderPlaced) {
-    toast({
-      title: "Your cart is empty",
-      description: "Add some items to your cart before checkout.",
-      variant: "destructive",
-    });
-    router.push("/shop");
-  }
+  useEffect(() => {
+    if (cartItems.length === 0 && !orderPlaced) {
+      toast({
+        title: "Your cart is empty",
+        description: "Add some items to your cart before checkout.",
+        variant: "destructive",
+      });
+      router.push("/shop");
+    }
+  }, [cartItems.length, orderPlaced, router, toast]);
 
   const onSubmit = async (data: CheckoutFormValues) => {
     setProcessingOrder(true);
@@ -120,7 +122,7 @@ const CheckoutPage = () => {
           <h1 className="text-3xl font-bold mb-4">Order Confirmed!</h1>
           <p className="text-lg mb-8">
             Your order <span className="font-semibold">#{orderNumber}</span> has been placed successfully.
-            We'll send you a confirmation email with order details shortly.
+            We&apos;ll send you a confirmation email with order details shortly.
           </p>
           
           <div className="bg-white dark:bg-gray-950 border rounded-lg p-6 mb-8 text-left">

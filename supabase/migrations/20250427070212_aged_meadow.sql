@@ -117,7 +117,7 @@ CREATE POLICY "Categories are viewable by everyone"
 
 CREATE POLICY "Only admins can insert categories"
   ON categories FOR INSERT
-  USING (
+  WITH CHECK (
     EXISTS (
       SELECT 1 FROM profiles
       WHERE profiles.id = auth.uid() AND profiles.is_admin = true
@@ -150,7 +150,7 @@ CREATE POLICY "Products are viewable by everyone"
 
 CREATE POLICY "Only admins can insert products"
   ON products FOR INSERT
-  USING (
+  WITH CHECK (
     EXISTS (
       SELECT 1 FROM profiles
       WHERE profiles.id = auth.uid() AND profiles.is_admin = true
